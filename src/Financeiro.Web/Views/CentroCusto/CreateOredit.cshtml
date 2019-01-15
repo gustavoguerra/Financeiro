@@ -1,0 +1,33 @@
+@model Financeiro.Web.Models.CentroCustoViewModel
+
+@{
+Layout = "_Dashboard";
+}
+<script type="text/javascript" src="~/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+<div class="content-wrapper">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body col-md-5 align-self-center">
+        <h3>Cadastro Centro de Custo</h3>
+
+        <form class="form-sample" asp-action="CreateOrEdit" asp-controller="CentroCusto" asp-anti-forgery>
+          
+          <input type="hidden" class="form-control" asp-for="ID" />
+                  
+          <div class="form-group">
+            <label>Descrição</label>
+            <input type="text" asp-for="DESCRICAO" class="form-control"> 
+            <span asp-validation-for="DESCRICAO" class="text-danger"></span>
+          </div>
+          
+           <button type="submit" class="btn btn-outline-success btn-fw">
+          <i class="mdi mdi-file-document"></i>Salvar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

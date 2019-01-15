@@ -1,0 +1,27 @@
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.deps.json
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.dll
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.pdb
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csprojAssemblyReference.cache
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csproj.CoreCompileInputs.cache
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfoInputs.cache
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfo.cs
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.dll
+D:\Projetos CGTI\Core2\financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.pdb
+E:\Projeto\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.deps.json
+E:\Projeto\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.dll
+E:\Projeto\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.pdb
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csprojAssemblyReference.cache
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csproj.CoreCompileInputs.cache
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfoInputs.cache
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfo.cs
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.dll
+E:\Projeto\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.pdb
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.deps.json
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.dll
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\bin\Debug\netstandard2.0\Financeiro.Domain.pdb
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csprojAssemblyReference.cache
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.csproj.CoreCompileInputs.cache
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfoInputs.cache
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.AssemblyInfo.cs
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.dll
+E:\Repositorio_Projetos\Financeiro\src\Financeiro.Domain\obj\Debug\netstandard2.0\Financeiro.Domain.pdb

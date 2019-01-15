@@ -1,0 +1,172 @@
+@model ContasPagasViewModel
+
+@{
+Layout = "_dashboard";
+}
+
+
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="content-wrapper">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Lançamento de conta</h4>
+
+        <form class="form-sample" asp-action="Criar" asp-controller="ContasPagar" asp-anti-forgery>
+          <!-- <p class="card-description">
+            Personal info
+          </p> -->
+          <input type="hidden" class="form-control" asp-for="ID" />
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Descrição</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" asp-for="DESCRICAO" />
+                  <span asp-validation-for="DESCRICAO" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Empresa</label>
+                <div class="col-sm-9">
+                  @Html.DropDownListFor(model => model.EMPRESAID, new SelectList(this.Model.ListEmpresa, "ID","NOMEFANTASIA"), "Selecione uma Empresa", new {@class = "form-control" })
+                  <span asp-validation-for="EMPRESAID" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Fornecedor</label>
+                <div class="col-sm-9">
+                  @Html.DropDownListFor(model => model.FORNECEDORID, new SelectList(this.Model.ListFornecedor, "ID","NOMEFANTASIA"), "Selecione um fornecedor", new {@class = "form-control" })
+                  <span asp-validation-for="FORNECEDORID" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Documento</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="DOCUMENTO" />
+                  <span asp-validation-for="DOCUMENTO" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Data da Conta</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="DATACONTA" id="DataConta" />
+                  <span asp-validation-for="DATACONTA" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Data do Pagamento</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="DATAPAGAMENTO" id="DataPagamento" />
+                  <span asp-validation-for="DATAPAGAMENTO" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Valor da Conta</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="VALOR " id="Valor" />
+                  <span asp-validation-for="VALOR " class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <p class="card-description">
+            Centro de Custo e Conta Caixa
+          </p>
+
+          <div class="container">
+            <a id="add_row" class="btn btn-outline-primary btn-fw"><i class="mdi mdi-database-plus"></i>Nova Descrição</a>
+            <a id='delete_row' class="btn btn-outline-primary btn-fw"><i class="mdi mdi-database-minus"></i>Apagar
+              Descrição</a>
+
+            <div class="row clearfix">
+              <div class="col-md-12 column">
+                <table class="table table-bordered table-hover" id="tab_logic">
+                  <thead>
+                    <tr>
+                      <th class="text-center">
+                        #
+                      </th>
+                      <th class="text-center">
+                        Centro de Custo
+                      </th>
+                      <th class="text-center">
+                        Conta Caixa
+                      </th>
+                      <th class="text-center">
+                        Valor
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id='addr0'>
+                      <td>
+                        1
+                      </td>
+                      <td>
+                        @Html.DropDownListFor(model => model.CENTROCUSTOID, new SelectList(this.Model.ListCentroCusto, "ID","DESCRICAO"), "Selecione Centro de Custo", new {@class = "form-control" })
+                        <input type="text" name='name0' placeholder='Centro de Custo' class="form-control" />
+                      </td>
+                      <td>
+                        @Html.DropDownListFor(model => model.CONTACAIXAID, new SelectList(this.Model.ListContaCaixa, "ID","DESCRICAO"), "Selecione Conta Caixa", new {@class = "form-control" })
+                        <input type="text" name='mail0' placeholder='Conta Caixa' class="form-control" />
+                      </td>
+                      <td>
+                        <input type="text" name='mobile0' placeholder='Valor R$' class="form-control" />
+                      </td>
+                    </tr>
+                    <tr id='addr1'></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    var i = 1;
+    $("#add_row").click(function () {
+      $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='name" + i + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+      $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+      i++;
+    });
+    $("#delete_row").click(function () {
+      if (i > 1) {
+        $("#addr" + (i - 1)).html('');
+        i--;
+      }
+    });
+
+  });
+</script>

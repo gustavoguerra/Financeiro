@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "e:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.DI\\Financeiro.DI.csproj",
+  "TargetFramework": "netstandard2.0",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}

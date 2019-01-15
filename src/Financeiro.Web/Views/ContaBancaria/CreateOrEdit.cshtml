@@ -1,0 +1,81 @@
+@model Financeiro.Web.Models.ContaBancariaViewModel
+
+@{
+Layout = "_Dashboard";
+}
+<script type="text/javascript" src="~/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+  jQuery(function ($) {
+    $("#Telefone").mask("(99) 9999-9999", { placeholder: "(00) 0000-0000" });
+  });
+</script>
+
+<div class="content-wrapper">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body col-md-5 align-self-center">
+        <h3>Cadasgtro de Conta Bancaria</h3>
+
+        <form class="form-sample" asp-action="CreateOrEdit" asp-controller="ContaBancaria" asp-anti-forgery>
+          
+          <input type="hidden" class="form-control" asp-for="ID" />
+          
+          <div class="form-group">
+            <label for="exampleFormControlSelect2">Nome da Empresa</label>
+            @Html.DropDownListFor(model => model.EMPRESAID, new SelectList(this.Model.EmpresaList, "ID", "NOMEFANTASIA"), "Selecione uma Empresa", new {@class = "form-control" })
+            <span asp-validation-for="EMPRESAID" class="text-danger"></span>
+          </div>
+         
+          <div class="form-group">
+            <label>Nome do Banco</label>
+            <input type="text" asp-for="DESCRICAO" class="form-control"> 
+            <span asp-validation-for="DESCRICAO" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Codigo do Banco</label>
+            <input type="text" asp-for="CODIGOBANCO" class="form-control"> 
+            <span asp-validation-for="CODIGOBANCO" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Numero da Agencia</label>
+            <input type="text" asp-for="AGENCIA" class="form-control">
+            <span asp-validation-for="AGENCIA" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Numero da Conta</label>
+            <input type="text" asp-for="CONTA" class="form-control">
+            <span asp-validation-for="CONTA" class="text-danger"></span>            
+          </div>
+
+          <div class="form-group">
+            <label>Nome do Gerente</label>
+            <input type="text" asp-for="GERENTE" class="form-control">
+            <span asp-validation-for="GERENTE" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Telefone da Agencia</label>
+            <input type="text" asp-for="TELEFONE" class="form-control" id="Telefone">
+            <span asp-validation-for="TELEFONE" class="text-danger"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Data de Abertura da Conta</label>
+            <input type="date" asp-for="DATAABERTURA" class="form-control">
+            <span asp-validation-for="DATAABERTURA" class="text-danger"></span>
+          </div>
+          
+           <button type="submit" class="btn btn-outline-success btn-fw">
+          <i class="mdi mdi-file-document"></i>Salvar</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

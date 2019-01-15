@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Financeiro.Web</title>
+
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+    <!-- CSS Tela Inicial-->
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="~/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="~/css/creative.min.css" rel="stylesheet">
+  
+</head>
+<body>
+    
+    <div class="">
+        @RenderBody()
+        <hr />
+        <footer>
+             <p class="footer-text text-center">copyright © 2018 Luis Gustavo Guerra. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <environment include="Development">
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <!-- JS Tela Inicial -->
+        <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="~/vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="~/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="~/js/creative.min.js"></script>
+       
+    </environment>
+
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
