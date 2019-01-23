@@ -16,7 +16,6 @@ namespace Financeiro.Web.Controllers
         private readonly IRepository<Empresa> _empresarepository;
         private readonly IRepository<CentroCusto> _centrocustorepository;
         private readonly IRepository<ContaCaixa> _contacaixarepository;
-
         private readonly IRepository<ContaBancaria> _contabancariarepository;
 
         public ContasPagarController(IRepository<ContasPagas> contaspagarrepository, IRepository<Fornecedor> fornecedorrepositry, 

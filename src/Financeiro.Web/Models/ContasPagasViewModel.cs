@@ -27,6 +27,5 @@ namespace Financeiro.Web.Models
         public IEnumerable<ContaBancariaViewModel> ListContaBancaria { get; set; }
         public List<int> CENTROCUSTOID { get; set; }
         public List<int> CONTACAIXAID { get; set; }
-
     }
 }
