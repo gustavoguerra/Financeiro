@@ -14,7 +14,8 @@ namespace Financeiro.Data.Repository
         public override ContasPagas GetById(int id)
         {
             var query = _context.Set<ContasPagas>().Include(c => c.EMPRESA).Where(e => e.ID == id)
-                                                   .Include(f => f.FORNECEDOR).Where(c => c.ID == id);
+                                                   .Include(f => f.FORNECEDOR).Where(c => c.ID == id)
+                                                   .Include(b => b.CONTABANCARIA).Where(f => f.ID == id);
 
             if (query.Any())
                 return query.First();
@@ -24,7 +25,7 @@ namespace Financeiro.Data.Repository
 
         public override IEnumerable<ContasPagas> GetAll()
         {
-            return _context.Set<ContasPagas>().Include(p => p.EMPRESA).Include(a => a.FORNECEDOR).AsEnumerable();
+            return _context.Set<ContasPagas>().Include(p => p.EMPRESA).Include(a => a.FORNECEDOR).Include(c => c.CONTABANCARIA).AsEnumerable();
         }
     }
 }

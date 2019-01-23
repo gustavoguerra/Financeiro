@@ -6,9 +6,7 @@ namespace Financeiro.Domain.Contas
     public class ContasPagasStore
     {
         private readonly IRepository<Empresa> _empresarepository;
-
         private readonly IRepository<Fornecedor> _fornecedorrepository;
-
         private readonly IRepository<ContasPagas> _contapagarrepository;
         private readonly IRepository<ContaBancaria> _contabancariarepository;
         public ContasPagasStore(IRepository<Empresa> empresarepository, IRepository<Fornecedor> fornecedorrepository,IRepository<ContasPagas> contapagarrepotitory, IRepository<ContaBancaria> contabancariarepository)

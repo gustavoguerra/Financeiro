@@ -17,14 +17,17 @@ namespace Financeiro.Web.Controllers
         private readonly IRepository<CentroCusto> _centrocustorepository;
         private readonly IRepository<ContaCaixa> _contacaixarepository;
 
+        private readonly IRepository<ContaBancaria> _contabancariarepository;
+
         public ContasPagarController(IRepository<ContasPagas> contaspagarrepository, IRepository<Fornecedor> fornecedorrepositry, 
-            IRepository<Empresa> empresarepository, IRepository<CentroCusto> centrocustorepository, IRepository<ContaCaixa> contacaixarepository)
+            IRepository<Empresa> empresarepository, IRepository<CentroCusto> centrocustorepository, IRepository<ContaCaixa> contacaixarepository, IRepository<ContaBancaria> contabancariarepository)
         {
             _contaspagarrepository = contaspagarrepository;
             _fornecedorrepository = fornecedorrepositry;
             _empresarepository = empresarepository;
             _centrocustorepository = centrocustorepository;
             _contacaixarepository = contacaixarepository;
+            _contabancariarepository = contabancariarepository;
         }        
 
         public IActionResult Criar()
@@ -34,11 +37,13 @@ namespace Financeiro.Web.Controllers
             var fornecedor = _fornecedorrepository.GetAll();
             var contacaixa =_contacaixarepository.GetAll();
             var centrocusto = _centrocustorepository.GetAll();
+            var contabancaria = _contabancariarepository.GetAll();
 
             viewmodel.ListFornecedor = fornecedor.Select(e => new FornecedorViewModel { ID = e.ID, NOMEFANTASIA = e.NOMEFANTASIA });
             viewmodel.ListEmpresa = empresa.Select(e => new EmpresaViewModel { ID = e.ID, NOMEFANTASIA = e.NOMEFANTASIA });
             viewmodel.ListCentroCusto = centrocusto.Select(e => new CentroCustoViewModel { ID = e.ID, DESCRICAO = e.DESCRICAO });
             viewmodel.ListContaCaixa = contacaixa.Select(e => new ContaCaixaViewModel { ID = e.ID, DESCRICAO = e.DESCRICAO });
+            viewmodel.ListContaBancaria = contabancaria.Select(e => new ContaBancariaViewModel {ID = e.ID, DESCRICAO = e.DESCRICAO});
             // fazer daqui
             return View(viewmodel);
         }
@@ -48,13 +53,5 @@ namespace Financeiro.Web.Controllers
         {
             return View();
         }
-
-
-
-
-
-
-
-
     }
 }

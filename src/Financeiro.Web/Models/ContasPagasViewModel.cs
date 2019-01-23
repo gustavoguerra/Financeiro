@@ -9,18 +9,24 @@ namespace Financeiro.Web.Models
         public string DESCRICAO { get; set; }
         public int EMPRESAID { get; set; }
         public int FORNECEDORID { get; set; }
+        public int CONTABANCARIAID { get; set; }
+        public string TIPOPAGAMENTO { get; set; }
+        public string FAVORECIDO { get; set; }
         public string DOCUMENTO { get; set; }
-        public string STATUSPAGAMENTO { get; set; }   
+        public string STATUSPAGAMENTO { get; set; }
         public double VALOR { get; set; }
         public string DATACONTA { get; set; }
         public string PREVPAGAMENTO { get; set; }
         public string DATAPAGAMENTO { get; set; }
-        public string DATATIME { get; set; }   
-        public List<int> CENTROCUSTOID { get; set; }
-        public List<int> CONTACAIXAID { get; set; }
+        public string OBSERVACAO { get; set; }
+        public string DATATIME { get; set; }
         public IEnumerable<EmpresaViewModel> ListEmpresa { get; set; }
         public IEnumerable<FornecedorViewModel> ListFornecedor { get; set; }
         public IEnumerable<CentroCustoViewModel> ListCentroCusto { get; set; }
         public IEnumerable<ContaCaixaViewModel> ListContaCaixa { get; set; }
+        public IEnumerable<ContaBancariaViewModel> ListContaBancaria { get; set; }
+        public List<int> CENTROCUSTOID { get; set; }
+        public List<int> CONTACAIXAID { get; set; }
+
     }
 }

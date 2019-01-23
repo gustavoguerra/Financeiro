@@ -4,19 +4,11 @@
 Layout = "_dashboard";
 }
 
-
-<!-- Acertar JS para ADD um Select nao um imput -->
-
-<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-<!------ Include the above in your HEAD tag ---------->
-
 <div class="content-wrapper">
   <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title">Lançamento de conta</h4>
+        <h4 class="card-title">Lançamento de conta paga</h4>
 
         <form class="form-sample" asp-action="Criar" asp-controller="ContasPagar" asp-anti-forgery>
           <!-- <p class="card-description">
@@ -55,10 +47,10 @@ Layout = "_dashboard";
             </div>
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Documento</label>
+                <label class="col-sm-3 col-form-label">Conta Bancaria</label>
                 <div class="col-sm-9">
-                  <input class="form-control" placeholder="" asp-for="DOCUMENTO" />
-                  <span asp-validation-for="DOCUMENTO" class="text-danger"></span>
+                  @Html.DropDownListFor(model => model.CONTABANCARIAID, new SelectList(this.Model.ListContaBancaria, "ID","DESCRICAO"), "Selecione um fornecedor", new {@class = "form-control" })
+                  <span asp-validation-for="CONTABANCARIAID" class="text-danger"></span>
                 </div>
               </div>
             </div>
@@ -66,10 +58,30 @@ Layout = "_dashboard";
           <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Data da Conta</label>
+                <label class="col-sm-3 col-form-label">Tipo Pagamento</label>
                 <div class="col-sm-9">
-                  <input class="form-control" placeholder="" asp-for="DATACONTA" id="DataConta" />
-                  <span asp-validation-for="DATACONTA" class="text-danger"></span>
+                  <input class="form-control" placeholder="" asp-for="TIPOPAGAMENTO" id="TipoPagamento" />
+                  <span asp-validation-for="TIPOPAGAMENTO" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Favorecido</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="FAVORECIDO" id="Favorecido" />
+                  <span asp-validation-for="FAVORECIDO" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Documento</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="DOCUMENTO" id="ocumento" />
+                  <span asp-validation-for="DOCUMENTO" class="text-danger"></span>
                 </div>
               </div>
             </div>
@@ -83,19 +95,27 @@ Layout = "_dashboard";
               </div>
             </div>
           </div>
-
+          
           <div class="row">
             <div class="col-md-6">
               <div class="form-group row">
-                <label class="col-sm-3 col-form-label">Valor da Conta</label>
+                <label class="col-sm-3 col-form-label">Data da Conta</label>
                 <div class="col-sm-9">
-                  <input class="form-control" placeholder="" asp-for="VALOR " id="Valor" />
+                  <input class="form-control" placeholder="" asp-for="DATACONTA" id="DataConta" />
+                  <span asp-validation-for="DATACONTA" class="text-danger"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Valor</label>
+                <div class="col-sm-9">
+                  <input class="form-control" placeholder="" asp-for="VALOR " id="Valor" placeholder='Valor R$'/>
                   <span asp-validation-for="VALOR " class="text-danger"></span>
                 </div>
               </div>
             </div>
           </div>
-
 
           <p class="card-description">
             Centro de Custo e Conta Caixa
@@ -157,20 +177,23 @@ Layout = "_dashboard";
   $(document).ready(function () {
     var i = 1;
 
-    var centrocusto = document.getElementById('CENTROCUSTOID').cloneNode(true);
-    var centrocusto1 = $('#CENTROCUSTOID').clone(true);
+  $("#add_row").click(function () {  
+ 
+    var centrocusto = $('#CENTROCUSTOID').clone(true);  
+    var contacaixa = $('#CONTACAIXAID').clone(true);  
+  
+    $('#addr' + i).html("<td>" + (i + 1) + "</td>"+    
 
-    $("#add_row").click(function () {      
-      $('#addr' + i).html("<td>" + (i + 1) + "</td>"+    
+      "<td id='cecu" + (i + 1) + "'></td>"+
 
-      "<td id='dd" + (i + 1) + "'></td>"+
-
-      "<td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td>"+
-      "<td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+      "<td id='coca" + (i + 1) + "'></td>"+
+      "<td><input  name='val" + i + "' type='text' placeholder='Valor R$'  class='form-control input-md'></td>");
 
       $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
 
-      $('#dd'+(i + 1)).append(centrocusto1.attr({id : 'CENTROCUSTO' + (i + 1), name: 'CENTROCUSTO' + ( i + 1 )}));
+      $('#cecu'+(i + 1)).append(centrocusto.attr({id : 'CENTROCUSTO' + (i + 1), name: 'CENTROCUSTO' + ( i + 1 )}));
+      $('#coca'+ ( i + 1 )).append(contacaixa.attr({id: 'CONTACAIXA'+ (i + 1 ), name: 'CONTACAIXA'+ ( i + 1 )}));
+
       i++;
     });
 
@@ -180,32 +203,5 @@ Layout = "_dashboard";
         i--;
       }
     });
-
   });
 </script>
-
-<!-- <script>
-  $(document).ready(function () {
-    var i = 1;
-    var centrocusto = document.getElementById('CENTROCUSTOID').cloneNode(true);
-    console.log(centrocusto);
-    $("#add_row").click(function () {
-      $('#addr' + i).html("<td>" + (i + 1) + "</td>"+    
-      "<td id='dd"+(i + 1)+"'></td>"+
-      "<td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td>"+
-      "<td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
-      
-      $('#dd'+(i + 1)).append(centrocusto);
-      $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
-   
-      i++;
-    });
-    $("#delete_row").click(function () {
-      if (i > 1) {
-        $("#addr" + (i - 1)).html('');
-        i--;
-      }
-    });
-
-  });
-</script> -->

@@ -12247,11 +12247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repositorio_Projetos\\financeiro\\src\\financeiro.web\\Financeiro.Web.csproj",
+      "projectUniqueName": "E:\\Repositorio_Projetos\\Financeiro\\src\\financeiro.web\\Financeiro.Web.csproj",
       "projectName": "Financeiro.Web",
-      "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\financeiro.web\\Financeiro.Web.csproj",
+      "projectPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\financeiro.web\\Financeiro.Web.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "E:\\Repositorio_Projetos\\financeiro\\src\\financeiro.web\\obj\\",
+      "outputPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\financeiro.web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12270,11 +12270,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.DI\\Financeiro.DI.csproj": {
-              "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.DI\\Financeiro.DI.csproj"
+            "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.DI\\Financeiro.DI.csproj": {
+              "projectPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.DI\\Financeiro.DI.csproj"
             },
-            "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj": {
-              "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj"
+            "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj": {
+              "projectPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj"
             }
           }
         }
