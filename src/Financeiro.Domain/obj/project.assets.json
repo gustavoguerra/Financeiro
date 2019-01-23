@@ -185,22 +185,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "e:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
+      "projectUniqueName": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
       "projectName": "Financeiro.Domain",
-      "projectPath": "e:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
+      "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "e:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\obj\\",
+      "outputPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

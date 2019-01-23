@@ -3590,7 +3590,7 @@
       ]
     },
     "System.Security.AccessControl/4.5.0": {
-      "sha512": "6RQtcT+TyDgLUFsAnmmdfRRGdLYKxSZGkSPOd052tvYFxOTMaQb6ANlwhGqZtNO52PosaCoXu7uatFneujAxmA==",
+      "sha512": "aVjTe36YkO8FzfNhMLoPEzv3gF9rphoW9ngFhG/MH4zzEPLx07sNrgCLwMP4Wx2leI6qarMrGv21OwQXYUKLmw==",
       "type": "package",
       "path": "system.security.accesscontrol/4.5.0",
       "files": [
@@ -3709,7 +3709,7 @@
       ]
     },
     "System.Security.Cryptography.Xml/4.5.0": {
-      "sha512": "X+/taLXTKYziKvWE4ZEyhpY0QQ17fm9eW70cvMCE6LAsWYqdv708i0HJeSVy7/5R5547GR/CEGOjUkYq6bJfPg==",
+      "sha512": "UvxfrEg7YG7U6BQO8WdQ4Nu1LFt2lqYQnoZefaK/2RDvjYdJ+norsVe4dwOqo14XiipgYY5xNUo6VhQXNbl2vg==",
       "type": "package",
       "path": "system.security.cryptography.xml/4.5.0",
       "files": [
@@ -3730,7 +3730,7 @@
       ]
     },
     "System.Security.Permissions/4.5.0": {
-      "sha512": "O+e9qamSTJ4YOJCpnLgsf9FTGfsxJv2On1OdYkhmd/XA5AYRvUatkz7Rp3dS9XR7rhVuklnjST1dRoMK7N4cGw==",
+      "sha512": "vDQ7q30Soe0a1cPhvxn+7IFmMeTG5IP+hTQrnKQDjTNpD2epqwbZSzMM2Git5TXBr4Kwwhc/0SEtJY0qPoiegA==",
       "type": "package",
       "path": "system.security.permissions/4.5.0",
       "files": [
@@ -4087,29 +4087,31 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Data\\Financeiro.Data.csproj",
+      "projectUniqueName": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Data\\Financeiro.Data.csproj",
       "projectName": "Financeiro.Data",
-      "projectPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Data\\Financeiro.Data.csproj",
+      "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Data\\Financeiro.Data.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Data\\obj\\",
+      "outputPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Gustavo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj": {
-              "projectPath": "E:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj"
+            "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj": {
+              "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj"
             }
           }
         }

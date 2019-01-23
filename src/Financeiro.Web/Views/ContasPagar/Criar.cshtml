@@ -5,6 +5,8 @@ Layout = "_dashboard";
 }
 
 
+<!-- Acertar JS para ADD um Select nao um imput -->
+
 <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
@@ -129,15 +131,13 @@ Layout = "_dashboard";
                         1
                       </td>
                       <td>
-                        @Html.DropDownListFor(model => model.CENTROCUSTOID, new SelectList(this.Model.ListCentroCusto, "ID","DESCRICAO"), "Selecione Centro de Custo", new {@class = "form-control" })
-                        <input type="text" name='name0' placeholder='Centro de Custo' class="form-control" />
+                        @Html.DropDownListFor(model => model.CENTROCUSTOID, new SelectList(this.Model.ListCentroCusto, "ID","DESCRICAO"), "Selecione Centro de Custo", new {@class = "form-control"})
                       </td>
                       <td>
                         @Html.DropDownListFor(model => model.CONTACAIXAID, new SelectList(this.Model.ListContaCaixa, "ID","DESCRICAO"), "Selecione Conta Caixa", new {@class = "form-control" })
-                        <input type="text" name='mail0' placeholder='Conta Caixa' class="form-control" />
                       </td>
                       <td>
-                        <input type="text" name='mobile0' placeholder='Valor R$' class="form-control" />
+                        <input type="text" name='mobile0' placeholder='Valor R$' class='form-control' />
                       </td>
                     </tr>
                     <tr id='addr1'></tr>
@@ -153,12 +153,51 @@ Layout = "_dashboard";
 </div>
 
 <script>
+
   $(document).ready(function () {
     var i = 1;
-    $("#add_row").click(function () {
-      $('#addr' + i).html("<td>" + (i + 1) + "</td><td><input name='name" + i + "' type='text' placeholder='Name' class='form-control input-md'  /> </td><td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td><td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+
+    var centrocusto = document.getElementById('CENTROCUSTOID').cloneNode(true);
+    var centrocusto1 = $('#CENTROCUSTOID').clone(true);
+
+    $("#add_row").click(function () {      
+      $('#addr' + i).html("<td>" + (i + 1) + "</td>"+    
+
+      "<td id='dd" + (i + 1) + "'></td>"+
+
+      "<td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td>"+
+      "<td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
 
       $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+
+      $('#dd'+(i + 1)).append(centrocusto1.attr({id : 'CENTROCUSTO' + (i + 1), name: 'CENTROCUSTO' + ( i + 1 )}));
+      i++;
+    });
+
+    $("#delete_row").click(function () {
+      if (i > 1) {
+        $("#addr" + (i - 1)).html('');
+        i--;
+      }
+    });
+
+  });
+</script>
+
+<!-- <script>
+  $(document).ready(function () {
+    var i = 1;
+    var centrocusto = document.getElementById('CENTROCUSTOID').cloneNode(true);
+    console.log(centrocusto);
+    $("#add_row").click(function () {
+      $('#addr' + i).html("<td>" + (i + 1) + "</td>"+    
+      "<td id='dd"+(i + 1)+"'></td>"+
+      "<td><input  name='mail" + i + "' type='text' placeholder='Mail'  class='form-control input-md'></td>"+
+      "<td><input  name='mobile" + i + "' type='text' placeholder='Mobile'  class='form-control input-md'></td>");
+      
+      $('#dd'+(i + 1)).append(centrocusto);
+      $('#tab_logic').append('<tr id="addr' + (i + 1) + '"></tr>');
+   
       i++;
     });
     $("#delete_row").click(function () {
@@ -169,4 +208,4 @@ Layout = "_dashboard";
     });
 
   });
-</script>
+</script> -->

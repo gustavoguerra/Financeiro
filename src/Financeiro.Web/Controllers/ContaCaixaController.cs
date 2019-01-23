@@ -64,7 +64,7 @@ namespace Financeiro.Web.Controllers
 
             var contacaixa = _contacaixarepositry.GetById(id_pai);
 
-            int all =_contacaixarepositry.GetAll().Where(c => c.PARENTID == id_pai).Count();
+            int all = _contacaixarepositry.GetAll().Where(c => c.PARENTID == id_pai).Count();
 
             ContaCaixaDto dto = new ContaCaixaDto();
 
