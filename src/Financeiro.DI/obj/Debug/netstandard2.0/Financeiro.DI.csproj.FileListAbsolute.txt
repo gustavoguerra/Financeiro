@@ -40,3 +40,17 @@ E:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Fi
 E:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.csproj.CopyComplete
 E:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.dll
 E:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.pdb
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.DI.deps.json
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.DI.dll
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.DI.pdb
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.Data.dll
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.Domain.dll
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.Data.pdb
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\bin\Debug\netstandard2.0\Financeiro.Domain.pdb
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.csprojAssemblyReference.cache
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.csproj.CoreCompileInputs.cache
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.AssemblyInfoInputs.cache
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.AssemblyInfo.cs
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.csproj.CopyComplete
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.dll
+D:\Repositorio_Projetos\Financeiro\src\Financeiro.DI\obj\Debug\netstandard2.0\Financeiro.DI.pdb

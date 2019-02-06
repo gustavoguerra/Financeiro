@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
+      "projectUniqueName": "d:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
       "projectName": "Financeiro.Domain",
-      "projectPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
+      "projectPath": "d:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\Financeiro.Domain.csproj",
       "packagesPath": "C:\\Users\\Gustavo\\.nuget\\packages\\",
-      "outputPath": "E:\\Repositorio_Projetos\\financeiro\\src\\Financeiro.Domain\\obj\\",
+      "outputPath": "d:\\Repositorio_Projetos\\Financeiro\\src\\Financeiro.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
