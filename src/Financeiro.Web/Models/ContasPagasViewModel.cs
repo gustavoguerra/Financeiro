@@ -25,7 +25,11 @@ namespace Financeiro.Web.Models
         public IEnumerable<CentroCustoViewModel> ListCentroCusto { get; set; }
         public IEnumerable<ContaCaixaViewModel> ListContaCaixa { get; set; }
         public IEnumerable<ContaBancariaViewModel> ListContaBancaria { get; set; }
+
         public List<int> CENTROCUSTOID { get; set; }
         public List<int> CONTACAIXAID { get; set; }
+        public List<double> VALORRECURSO { get; set; }
+      
     }
+ 
 }

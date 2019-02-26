@@ -50,7 +50,7 @@ namespace Financeiro.Web.Controllers
         [HttpPost]
         public IActionResult Criar(ContasPagasViewModel model)
         {
-            return View();
+            return RedirectToAction("Criar");
         }
     }
 }
